@@ -1,0 +1,49 @@
+Create a single-page hero section for a PERSONAL TECHNICAL BLOG with a fullscreen looping background video, glassmorphic navigation, and clean cinematic typography. Use React + Vite + Tailwind CSS + TypeScript with shadcn/ui.
+
+Video Background:
+Fullscreen <video> element with autoPlay, loop, muted, playsInline
+Use a clean, dark coding/tech abstract video (free link)
+Source URL: https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4
+Positioned absolute inset-0 w-full h-full object-cover z-0
+
+Fonts:
+Import from Google Fonts: Instrumental Serif (display) and Inter weights 400/500 (body)
+CSS variables: --font-display: 'Instrument Serif', serif and --font-body: 'Inter', sans-serif
+Headings use display font, body uses Inter.
+
+Color Theme (dark, tech style):
+--background: 222 47% 11%
+--foreground: 0 0% 100%
+--muted-foreground: 215 13% 70%
+--primary: 210 100% 66%
+--secondary: 216 28% 18%
+--border: 216 28% 22%
+
+Navigation Bar:
+relative z-10, flex row, justify-between, px-6 sm:px-12 py-6, max-w-7xl mx-auto
+Logo: Your Name (e.g. "Dev Notes") text-3xl, Instrument Serif, white
+Nav links (hidden on mobile, md:flex): Home, Articles, Projects, About — text-sm, muted hover white
+CTA button: "Subscribe" glassmorphic rounded-full px-5 py-2
+
+Hero Section:
+relative z-10, flex column, center, text-center, px-6 pt-32 pb-40
+H1 (display font, text-5xl sm:text-7xl): "Code. Learn. Build. Share."
+Highlight "Code" and "Build" with primary color
+Subtext: "Personal blog for developers — learning notes, project breakdowns, and technical explorations."
+Centered, muted text, max-w-xl, mt-6
+CTA button: "Browse Articles" — large glassmorphic rounded-full px-12 py-4 mt-10
+
+Liquid Glass Effect (CSS class .liquid-glass):
+.liquid-glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+Animations:
+fade-rise animation for hero text (0.8s ease-out)
+H1: animate-fade-rise
+Subtext: delay 0.2s
+Button: delay 0.4s
+
+Style: minimalist tech blog, clean, professional, no extra decorations, no art elements, no fancy graphics. Only video + text + glass navbar.

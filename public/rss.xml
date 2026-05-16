@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/rss-style.xsl"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>DM Notes</title>
+  <description>个人技术博客 — 学习笔记、项目拆解与技术探索</description>
+  <link>https://your-domain.github.io</link>
+  <atom:link href="https://your-domain.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+  <lastBuildDate>Sun, 10 May 2026 05:43:05 GMT</lastBuildDate>
+  <item>
+    <title>搭建个人技术博客的完整指南</title>
+    <link>https://your-domain.github.io/blog/hello-world</link>
+    <guid>https://your-domain.github.io/blog/hello-world</guid>
+    <pubDate>Fri, 01 May 2026 00:00:00 GMT</pubDate>
+    <description>这是一篇测试博文，用于验证博客的 Markdown 渲染功能。</description>
+  </item>
+  <item>
+    <title>利用Prompt生成酷炫网页工作流</title>
+    <link>https://your-domain.github.io/blog/利用Prompt生成酷炫网页工作流</link>
+    <guid>https://your-domain.github.io/blog/利用Prompt生成酷炫网页工作流</guid>
+    <pubDate>Fri, 01 May 2026 00:00:00 GMT</pubDate>
+    <description>目标：无需手动编写大量代码，通过优质参考网站获取精准Prompt，借助AI工具快速生成审美良好的网页，高效完成网页原型/成品制作。</description>
+  </item>
+  <item>
+    <title>前端测试策略与实践</title>
+    <link>https://your-domain.github.io/blog/testing-guide</link>
+    <guid>https://your-domain.github.io/blog/testing-guide</guid>
+    <pubDate>Sat, 25 Apr 2026 00:00:00 GMT</pubDate>
+    <description>这是一篇关于前端测试的示例文章。</description>
+  </item>
+  <item>
+    <title>系统设计学习笔记：从单体到微服务</title>
+    <link>https://your-domain.github.io/blog/system-design-notes</link>
+    <guid>https://your-domain.github.io/blog/system-design-notes</guid>
+    <pubDate>Wed, 15 Apr 2026 00:00:00 GMT</pubDate>
+    <description>梳理系统设计的核心概念。</description>
+  </item>
+</channel>
+</rss>
