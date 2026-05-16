@@ -214,6 +214,4 @@ demoUrl: https://xxx.vercel.app
 1. **CMS 集成**：接入 Contentful 或 Notion 作为内容管理后台
 2. **评论系统**：集成 Giscus（基于 GitHub Discussions）
 3. **统计**：集成 Google Analytics 或 Plausible
-4. **SEO 优化**：添加 react-helmet-async 管理 meta 标签
-5. **全文搜索**：使用 FlexSearch 或 Fuse.js 增强搜索
-6. **PWA**：添加 Service Worker 实现离线访问
+

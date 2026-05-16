@@ -10,7 +10,7 @@ const PUBLIC_DIR = path.join(ROOT, 'public');
 const SITE = {
   title: 'DM Notes',
   description: '个人技术博客 — 学习笔记、项目拆解与技术探索',
-  link: 'https://your-domain.github.io',
+  link: 'https://dm123asd.github.io',
 };
 
 function escapeXml(str) {

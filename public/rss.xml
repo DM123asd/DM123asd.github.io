@@ -4,35 +4,84 @@
 <channel>
   <title>DM Notes</title>
   <description>个人技术博客 — 学习笔记、项目拆解与技术探索</description>
-  <link>https://your-domain.github.io</link>
-  <atom:link href="https://your-domain.github.io/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Sun, 10 May 2026 05:43:05 GMT</lastBuildDate>
+  <link>https://dm123asd.github.io</link>
+  <atom:link href="https://dm123asd.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+  <lastBuildDate>Sat, 16 May 2026 08:35:09 GMT</lastBuildDate>
+  <item>
+    <title>利用Prompt生成酷炫网页工作流</title>
+    <link>https://dm123asd.github.io/blog/利用Prompt生成酷炫网页工作流</link>
+    <guid>https://dm123asd.github.io/blog/利用Prompt生成酷炫网页工作流</guid>
+    <pubDate>Fri, 01 May 2026 00:00:00 GMT</pubDate>
+    <description>AI快速生成审美高级的网页方法</description>
+  </item>
+  <item>
+    <title>MySQL快速入门</title>
+    <link>https://dm123asd.github.io/blog/MySQL快速入门</link>
+    <guid>https://dm123asd.github.io/blog/MySQL快速入门</guid>
+    <pubDate>Mon, 01 Sep 2025 16:00:00 GMT</pubDate>
+    <description>- 管理关系型数据库的数据库管理系统DBMS</description>
+  </item>
+  <item>
+    <title>线性代数-线性空间与线性变化</title>
+    <link>https://dm123asd.github.io/blog/线性代数-线性空间与线性变化</link>
+    <guid>https://dm123asd.github.io/blog/线性代数-线性空间与线性变化</guid>
+    <pubDate>Thu, 07 Aug 2025 16:00:00 GMT</pubDate>
+    <description>- 本章将向量和向量空间的概念抽象化，使概念推广应用。</description>
+  </item>
+  <item>
+    <title>线性代数-相似矩阵及二次型（p111-p134）</title>
+    <link>https://dm123asd.github.io/blog/线性代数-相似矩阵及二次型（p111-p134）</link>
+    <guid>https://dm123asd.github.io/blog/线性代数-相似矩阵及二次型（p111-p134）</guid>
+    <pubDate>Wed, 30 Jul 2025 00:00:00 GMT</pubDate>
+    <description>- n维列向量x，y的内积：$[x,y]=x_1y_1+x_2y_2+\dots+x_ny_n$，$[x,y]=x^Ty$</description>
+  </item>
+  <item>
+    <title>线性代数-向量组的线性相关性（p81-p106）</title>
+    <link>https://dm123asd.github.io/blog/线性代数-向量组的线性相关性（p81-p106）</link>
+    <guid>https://dm123asd.github.io/blog/线性代数-向量组的线性相关性（p81-p106）</guid>
+    <pubDate>Wed, 23 Jul 2025 00:00:00 GMT</pubDate>
+    <description>- n维向量：n个有次序的数组成的数组。每个数都是向量的分量，第i个数称为向量的第i个分量。默认为列向量，行向量用$a^T$表示。</description>
+  </item>
+  <item>
+    <title>线性代数-矩阵的初等变换和线性方程组 (p57-78)</title>
+    <link>https://dm123asd.github.io/blog/线性代数-矩阵的初等变换和线性方程组 (p57-78)</link>
+    <guid>https://dm123asd.github.io/blog/线性代数-矩阵的初等变换和线性方程组 (p57-78)</guid>
+    <pubDate>Tue, 15 Jul 2025 00:00:00 GMT</pubDate>
+    <description>联想线性方程组在消元过程中的变化，方程组的同解变换。</description>
+  </item>
+  <item>
+    <title>线性代数-矩阵及其运算（p29-p54）</title>
+    <link>https://dm123asd.github.io/blog/线性代数-矩阵及其运算（p29-p54）</link>
+    <guid>https://dm123asd.github.io/blog/线性代数-矩阵及其运算（p29-p54）</guid>
+    <pubDate>Mon, 07 Jul 2025 16:00:00 GMT</pubDate>
+    <description>函数是对未知数的映射，每个x只有一个对应的y。矩阵可看做对一组列向量的线性映射。</description>
+  </item>
+  <item>
+    <title>线性代数-行列式（p1-p25）</title>
+    <link>https://dm123asd.github.io/blog/线性代数-行列式（p1-p25）</link>
+    <guid>https://dm123asd.github.io/blog/线性代数-行列式（p1-p25）</guid>
+    <pubDate>Mon, 30 Jun 2025 16:00:00 GMT</pubDate>
+    <description>- n个不同元素所有排列组合，n个元素的排列组合有n！个逆序数</description>
+  </item>
   <item>
     <title>搭建个人技术博客的完整指南</title>
-    <link>https://your-domain.github.io/blog/hello-world</link>
-    <guid>https://your-domain.github.io/blog/hello-world</guid>
-    <pubDate>Fri, 01 May 2026 00:00:00 GMT</pubDate>
+    <link>https://dm123asd.github.io/blog/hello-world</link>
+    <guid>https://dm123asd.github.io/blog/hello-world</guid>
+    <pubDate>Thu, 01 May 2025 00:00:00 GMT</pubDate>
     <description>这是一篇测试博文，用于验证博客的 Markdown 渲染功能。</description>
   </item>
   <item>
-    <title>利用Prompt生成酷炫网页工作流</title>
-    <link>https://your-domain.github.io/blog/利用Prompt生成酷炫网页工作流</link>
-    <guid>https://your-domain.github.io/blog/利用Prompt生成酷炫网页工作流</guid>
-    <pubDate>Fri, 01 May 2026 00:00:00 GMT</pubDate>
-    <description>目标：无需手动编写大量代码，通过优质参考网站获取精准Prompt，借助AI工具快速生成审美良好的网页，高效完成网页原型/成品制作。</description>
-  </item>
-  <item>
     <title>前端测试策略与实践</title>
-    <link>https://your-domain.github.io/blog/testing-guide</link>
-    <guid>https://your-domain.github.io/blog/testing-guide</guid>
-    <pubDate>Sat, 25 Apr 2026 00:00:00 GMT</pubDate>
+    <link>https://dm123asd.github.io/blog/testing-guide</link>
+    <guid>https://dm123asd.github.io/blog/testing-guide</guid>
+    <pubDate>Fri, 25 Apr 2025 00:00:00 GMT</pubDate>
     <description>这是一篇关于前端测试的示例文章。</description>
   </item>
   <item>
     <title>系统设计学习笔记：从单体到微服务</title>
-    <link>https://your-domain.github.io/blog/system-design-notes</link>
-    <guid>https://your-domain.github.io/blog/system-design-notes</guid>
-    <pubDate>Wed, 15 Apr 2026 00:00:00 GMT</pubDate>
+    <link>https://dm123asd.github.io/blog/system-design-notes</link>
+    <guid>https://dm123asd.github.io/blog/system-design-notes</guid>
+    <pubDate>Tue, 15 Apr 2025 00:00:00 GMT</pubDate>
     <description>梳理系统设计的核心概念。</description>
   </item>
 </channel>

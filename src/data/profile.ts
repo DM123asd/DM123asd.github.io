@@ -2,7 +2,7 @@ import type { Profile } from '@/types';
 
 // 个人资料数据 — 在这里修改你的个人信息
 export const profile: Profile = {
-  name: 'DM Notes',
+  name: '豆苗的笔记',
   title: '修炼中的技术小杂鱼',
   avatar: '/assets/images/site/avatar.jpg',
   bio: '热爱技术与开源，专注于app开发、系统设计和 AI 应用。分享学习笔记与技术思考，记录成长轨迹。',
