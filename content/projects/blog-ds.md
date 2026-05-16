@@ -1,8 +1,8 @@
 ---
-name: Blog DS
-description: 现代化个人技术博客系统，支持 Markdown 渲染、代码高亮、LaTeX 公式和深色模式。
-coverImage: /assets/images/site/favicon.svg
+name: Blog DM
+description: 个人技术博客网站，支持 Markdown 渲染、代码高亮、LaTeX 公式和深色模式。
+coverImage: /assets/images/site/avatar.svg
 techStack: [React, TypeScript, Vite, Tailwind CSS]
-githubUrl: https://github.com
-demoUrl: https://example.com
+githubUrl: https://github.com/DM123asd/DM123asd.github.io
+demoUrl: https://DM123asd.github.io/DM123asd.github.io
 ---

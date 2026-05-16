@@ -21,16 +21,24 @@
 
 ```
 blog-ds/
-├── content/blog/                  # 【重要】Markdown 文章文件夹
-│   ├── hello-world.md             # 示例文章（测试 LaTeX、代码、图片）
-│   ├── testing-guide.md           # 示例文章
-│   └── system-design-notes.md     # 示例文章
-├── public/assets/
-│   ├── images/
-│   │   ├── blog/                  # 【重要】博客文章图片文件夹
-│   │   └── site/                  # 【重要】网站素材文件夹（头像、图标等）
-│   └── videos/
-│       └── mp_.mp4                # 首页背景视频
+├── content/
+│   ├── blog/                      # 【重要】Markdown 文章文件夹（自动发现）
+│   │   ├── hello-world.md
+│   │   ├── testing-guide.md
+│   │   ├── system-design-notes.md
+│   │   └── ...
+│   └── projects/                  # 【重要】项目信息文件夹（自动发现）
+│       ├── blog-ds.md
+│       ├── component-library.md
+│       └── api-hub.md
+├── public/
+│   ├── assets/
+│   │   ├── images/
+│   │   │   ├── blog/                  # 【重要】博客文章图片文件夹
+│   │   │   └── site/                  # 【重要】网站素材文件夹（头像、图标等）
+│   │   └── videos/                    # 视频背景文件（不同页面可指定不同视频）
+│   │       └── mp_.mp4
+│   └── rss-style.xsl              # RSS 浏览器友好样式
 ├── src/
 │   ├── components/
 │   │   ├── common/                # 通用组件
@@ -42,15 +50,14 @@ blog-ds/
 │   │   │   ├── BackToTop.tsx         # 返回顶部按钮
 │   │   │   ├── SearchBar.tsx         # 搜索栏
 │   │   │   ├── TagCloud.tsx          # 标签云
-│   │   │   └── Pagination.tsx        # 分页组件
+│   │   │   ├── Pagination.tsx        # 分页组件
+│   │   │   └── VideoBg.tsx           # 视频背景组件
 │   │   ├── layout/                # 布局组件
 │   │   │   ├── Navbar.tsx            # 响应式导航栏
 │   │   │   ├── Footer.tsx            # 页脚
 │   │   │   └── Layout.tsx            # 通用页面布局
-│   │   ├── home/                  # 首页组件
-│   │   ├── blog/                  # 博客组件
-│   │   ├── projects/              # 项目组件
-│   │   └── about/                 # 关于页组件
+│   │   ├── home/                  # 首页组件 (HeroSection)
+│   │   └── blog/                  # 博客组件 (BlogCard)
 │   ├── pages/                     # 页面组件
 │   │   ├── HomePage.tsx
 │   │   ├── BlogListPage.tsx
@@ -61,12 +68,17 @@ blog-ds/
 │   ├── hooks/                     # 自定义 Hooks
 │   │   ├── useTheme.ts            # 主题管理
 │   │   └── useScrollSpy.ts        # 滚动监听
+│   ├── data/                      # 个人数据与站点配置
+│   │   ├── profile.ts             # 个人信息（姓名、技能、经历、社交链接）
+│   │   └── siteConfig.ts          # 分类和标签管理
 │   ├── types/                     # TypeScript 类型定义
 │   ├── utils/                     # 工具函数和常量数据
 │   ├── App.tsx                    # 根组件（路由配置）
 │   ├── main.tsx                   # 入口文件
 │   └── index.css                  # 全局样式 + Tailwind
 ├── .github/workflows/deploy.yml   # GitHub Actions 自动部署
+├── scripts/
+│   └── generate-rss.js            # RSS 订阅源生成脚本
 ├── package.json
 ├── tsconfig.json
 ├── vite.config.ts
@@ -92,20 +104,24 @@ npm run dev
 
 ### 3. 发布新文章
 
-在 `content/blog/` 目录下创建新的 `.md` 文件，然后在 `src/utils/constants.ts` 的 `blogPosts` 数组中添加对应的元数据：
+在 `content/blog/` 目录下创建新的 `.md` 文件，使用 YAML frontmatter 声明元数据，文章会被**自动发现**：
 
-```typescript
-{
-  slug: 'my-new-post',          // 文件名（不含 .md）
-  title: '文章标题',
-  excerpt: '文章摘要...',
-  date: '2026-05-09',
-  readTime: 5,
-  category: '前端开发',
-  tags: ['React', 'TypeScript'],
-  featured: false,
-}
+```markdown
+---
+title: 文章标题
+date: 2026-05-16
+category: 前端开发
+tags: [React, TypeScript]
+---
+
+这里是文章正文...
 ```
+
+- `title` — 标题（可选，不写则取正文第一个 H1）
+- `date` — 日期
+- `category` — 分类（与 `src/data/siteConfig.ts` 中 `categories` 数组对应）
+- `tags` — 标签数组
+- `draft` — 设为 `true` 可隐藏该文章
 
 ### 4. 添加图片
 
@@ -161,15 +177,33 @@ npm run build
 - 跟随系统主题
 - Liquid Glass 毛玻璃效果
 
+### 订阅
+- RSS Feed 生成（`/rss.xml`，带浏览器友好样式）
+
 ## 自定义配置
 
 ### 修改个人信息
 
-编辑 `src/utils/constants.ts` 中的 `profile` 对象，更新姓名、简介、技能、经历等信息。
+编辑 `src/data/profile.ts`，更新姓名、简介、技能、经历、社交链接等信息。
 
 ### 修改项目展示
 
-编辑 `src/utils/constants.ts` 中的 `projects` 数组。
+编辑 `content/projects/*.md` 中的 YAML frontmatter，或新建 `.md` 文件。每个项目的元数据格式：
+
+```markdown
+---
+name: 项目名称
+description: 项目简介
+coverImage: /assets/images/cover.png
+techStack: [React, TypeScript]
+githubUrl: https://github.com/xxx
+demoUrl: https://xxx.vercel.app
+---
+```
+
+### 修改分类和标签
+
+编辑 `src/data/siteConfig.ts`，在 `categories` 或 `knownTags` 数组中增减项即可。
 
 ### 修改颜色主题
 
@@ -179,8 +213,7 @@ npm run build
 
 1. **CMS 集成**：接入 Contentful 或 Notion 作为内容管理后台
 2. **评论系统**：集成 Giscus（基于 GitHub Discussions）
-3. **RSS 订阅**：生成 RSS Feed 供读者订阅
-4. **统计**：集成 Google Analytics 或 Plausible
-5. **SEO 优化**：添加 react-helmet-async 管理 meta 标签
-6. **全文搜索**：使用 FlexSearch 或 Fuse.js 增强搜索
-7. **PWA**：添加 Service Worker 实现离线访问
+3. **统计**：集成 Google Analytics 或 Plausible
+4. **SEO 优化**：添加 react-helmet-async 管理 meta 标签
+5. **全文搜索**：使用 FlexSearch 或 Fuse.js 增强搜索
+6. **PWA**：添加 Service Worker 实现离线访问
